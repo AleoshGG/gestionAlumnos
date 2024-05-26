@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumnos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="h-left">
+            <div class="menu">
+                <a href="">Acerca de</a>
+                <a href="#arignar-calificacion">Asignar Calificaciones</a>
+                <a href="#lista-alumnos">Lista de alumnos</a>
+            </div>
+            <div class="h-img">
+                <img src="img/imageStruc.jpg" alt="Estructuras">
+                <img src="img/imageStruc1.jpg" alt="Estructuras">
+                <img src="img/imgeStruc2.jpg" alt="Estructuras">
+                <img src="img/imageStruc3.jpg" alt="Estructuras">
+            </div>
+        </div>
+        <div class="h-center">
+            <h1>Estructura de Datos Avanzadas</h1>
+            <p>Ing. Alexis Guzmán</p>
+        </div>
+        <div class="h-rigth">
+            <div class="circuloR"></div>
+            <div class="circuloA"></div>
+            <div class="circuloB"></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="inicio">
+            <div class="i-left">
+                <div class="rec-form">
+                    <div class="fondo">
+                        <h2>Inscribir Alumnos</h2>
+                    </div>
+                    <div class="contenido">
+                        <label for="matricula">Matrícula:</label> 
+                        <input type="number" id="matricula" class="input" placeholder="233333" maxlength="6" minlength="6">
+                        <label for="nombre">Nombres:</label>
+                        <input type="text" id="nombre" class="input" placeholder="Alexis">
+                        <label for="apellidoP">Apellido Paterno:</label>
+                        <input type="text" id="apellidoP" class="input" placeholder="Guzmán"> 
+                        <label for="apellidoM">Apellido Materno:</label>
+                        <input type="text" id="apellidoM" class="input" placeholder="Guzmán">  <br>
+                        <button id="inscribir">Inscribir</button> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="i-rigth">
+                <div class="rec-inicio-r">
+                    <table>
+                        <thead>
+                            <tr>
+                              <th>Sobre tus alumnos</th>  
+                            </tr>                           
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td">Inscritos</td>
+                                <td class="td">Aprovados</td>
+                                <td>Reprovados</td>
+                            </tr>
+                            <tr>
+                                <td class="td">
+                                    <div class="inscritos">
+                                        <p>18</p>
+                                    </div>
+                                </td>
+                                <td class="td">
+                                    <div class="aprovados">
+                                        <p>15</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="reprovados">
+                                        <p>03</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="asignar" id="asignar-calificacion">
+            <div class="rec-asig">
+                <div class="fondo">
+                    <h2>Asignar Calificaciones</h2>
+                </div>
+                <div class="rec-cont">
+                    <div class="form-asig">
+                        <label for="matric">Ingresa la matricula del alumno:</label> <br>
+                        <input type="number" maxlength="6" minlength="6" placeholder="233333" id="matric-b"> <br>
+                        <button id="buscar">Buscar</button>
+                    </div>
+
+                    <div class="rec-form-cal">
+                        <div class="form-cal">
+                          <h3>Calificación</h3>
+                            <label for="corte1">Corte uno:</label> 
+                            <input type="number" id="corte1" placeholder="00.00" maxlength="2"> <br>
+                            <label for="corte2">Corte dos:</label> 
+                            <input type="number" id="corte2" placeholder="00.00"> <br>
+                            <label for="corte3">Corte tres:</label> 
+                            <input type="number" id="corte3" placeholder="00.00">  
+                        </div>
+                        <div class="btn">
+                           <button id="guardarCal">Guargar</button> 
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lista-alumnos" id="lista-alumnos">
+            <div class="rec-lista">
+                <div class="fondo">
+                    <h2>Lista de Alumnos</h2>
+                </div>
+                <div class="lista-max-min">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Matrícula</th>
+                                <th>Apellido Paterno</th>
+                                <th>Apellido Materno</th>
+                                <th>C1</th>
+                                <th>C2</th>
+                                <th>C3</th>
+                                <th>Final</th>  
+                            </tr>                           
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Primero en la lista</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Último en la lista</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <button id="listaCompleta">Ver lista completa</button>
+
+                <div class="lista-max-min">
+                    <table>
+                        <thead>
+                            <th>Número de lista</th>
+                            <th>Matrícula</th>
+                            <th>Apellido Paterno</th>
+                            <th>Apellido Materno</th>
+                            <th>C1</th>
+                            <th>C2</th>
+                            <th>C3</th>
+                            <th>Final</th>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>

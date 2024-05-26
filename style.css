@@ -1,0 +1,365 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  padding: 2%;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  gap: 25px;
+}
+
+.hleft {
+  width: 45%;
+}
+
+.menu {
+  display: flex;
+  gap: 5%;
+}
+
+.menu > a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.menu > a:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+.menu > a:active {
+  transition: 0.2s;
+  color: #ffffff;
+}
+
+.h-img {
+  margin: 25px 0 0 0;
+  display: flex;
+  gap: 10px;
+}
+
+.h-img > img {
+  width: 140px;
+  border-radius: 15px;
+}
+
+.h-img > img:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+.h-center {
+  width: 45%;
+  text-align: end;
+}
+
+.h-center > h1 {
+  font-size: 40px;
+}
+
+.h-center > p {
+  font-size: 25px;
+}
+
+.h-rigth {
+  width: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.circuloR {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #d62839;
+}
+
+.circuloA {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #cce6f4;
+}
+
+.circuloB {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #175676;
+}
+
+.inicio {
+  width: 100%;
+  display: flex;
+  margin: 4% 0;
+}
+
+.i-left {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rec-form {
+  border-radius: 15px;
+  width: 85%;
+  border: 1px solid #175676;
+  box-shadow: 8px 8px 5px #cce6f4;
+}
+
+.fondo {
+  width: 100%;
+  height: 85px;
+  overflow: hidden;
+  position: relative;
+}
+
+.fondo::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100px;
+  background-image: url(/img/imageAlum1.jpg);
+  opacity: 25%;
+  background-size: cover;
+}
+
+.fondo > h2 {
+  position: relative;
+  z-index: 2;
+  padding: 0 0 0 25px;
+  color: #175676;
+}
+
+.contenido {
+  padding: 25px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input {
+  border-color: none;
+  border: 1px solid #b8b8b8;
+  border-radius: 5px;
+  padding: 8px;
+  text-align: center;
+}
+
+#inscribir, #buscar, #guardarCal, #listaCompleta {
+  width: 150px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #d62839;
+  color: #ffffff;
+  border: none;
+}
+
+#inscribir:hover, #buscar:hover, #guardarCal:hover, #listaCompleta:hover {
+  transition: 0.5s;
+  transform: scale(0.9);
+}
+
+#inscribir:active, #buscar:active, #guardarCal:active, #listaCompleta:active {
+  transition: 0.2s;
+  color: #d62839;
+}
+
+.i-rigth {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rec-inicio-r {
+  width: 85%;
+  border: 1px solid #175676;
+  box-shadow: 8px 8px 5px #cce6f4;
+  border-radius: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  text-align: center;
+  border-top: 1px solid #000000;
+  padding: 10px;
+}
+
+.td {
+  border-right: 1px solid #000000;
+}
+
+th {
+  padding: 10px;
+  text-align: end;
+}
+
+.inscritos {
+  width: 100px;
+  height: 100px;
+  background-color: #175676;
+  color: #ffffff;
+  font-size: 55px;
+  font-weight: bold;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aprovados {
+  width: 100px;
+  height: 100px;
+  background-color: #1b998b;
+  color: #ffffff;
+  font-size: 55px;
+  font-weight: bold;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reprovados {
+  width: 100px;
+  height: 100px;
+  background-color: #d62839;
+  color: #ffffff;
+  font-size: 55px;
+  font-weight: bold;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.asignar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rec-asig {
+  width: 98%;
+  border: 1px solid #175676;
+  border-radius: 15px;
+  box-shadow: 8px 8px 5px #cce6f4;
+}
+
+.rec-asig > .fondo::before {
+  background-image: url(/img/imageAlum.jpg);
+}
+
+.rec-cont {
+  background-color: #cce6f4;
+  border-radius: 0 0 15px 15px;
+  display: flex;
+  padding: 2% 5%;
+  gap: 25px;
+}
+
+.form-asig {
+  width: 40%;
+  font-weight: bold;
+}
+
+#matric-b, .form-cal > input {
+  margin: 10px 0 10px 0;
+  padding: 8px 25px;
+  text-align: center;
+  border-color: none;
+  border: 1px solid #b8b8b8;
+  border-radius: 8px;
+}
+
+.rec-form-cal {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #175676;
+  width: 60%;
+  display: flex;
+}
+
+.form-cal > label {
+  font-weight: bold;
+  margin: 0 30px 30px 0;
+}
+
+.form-cal > input {
+  width: 50px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.lista-alumnos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.rec-lista {
+  background-color: #cce6f4;
+  width: 98%;
+  border: 1px solid #175676;
+  box-shadow: 8px 8px 5px #cce6f4;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.rec-lista > .fondo {
+  text-align: start;
+}
+
+.rec-lista > .fondo::before {
+  background-image: url(/img/imageAlum2.jpg);
+}
+
+.lista-max-min {
+  padding: 3%;
+}
+
+.lista-max-min > table {
+  background-color: #e2e2e2;
+  border-radius: 8px;
+  border-collapse: collapse;
+  border: 2px solid #ffffff;
+}
+
+.lista-max-min > table > thead, 
+.lista-max-min > table > tbody > tr, 
+.lista-max-min > table > tbody > tr > td,
+.lista-max-min > table > thead > tr > th {
+  color: #6b6b6b;
+  border: 2px solid #ffffff;
+}
+
+.lista-max-min > table > tbody > tr > td {
+  color: #000000;
+}
+
+
