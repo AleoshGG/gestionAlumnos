@@ -72,4 +72,16 @@ export class BTS {
       return this.maxNode(node.rigth);
     }
   }
+
+  recorridoInorden(node, callback) {
+    if (node !== null) {
+      this.recorridoInorden(node.left, callback);
+      callback(node);
+      this.recorridoInorden(node.rigth, callback);
+    }
+  }
+
+  getRoot() {
+    return this.#root;
+  }
 }

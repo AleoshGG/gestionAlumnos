@@ -17,6 +17,7 @@ let btnInscribir = document.getElementById("inscribir");
 let btnBuscar = document.getElementById("buscar");
 let btnGuardar = document.getElementById("guardarCal");
 let btnMaxMin = document.getElementById("listaRapida");
+let btnRecorrer = document.getElementById("listaCompleta");
 
 btnInscribir.addEventListener("click", () => {
   let matricula = parseInt(document.getElementById("matricula").value);
@@ -34,10 +35,10 @@ btnInscribir.addEventListener("click", () => {
     alert("Ocurrio un error inesperado");
   }
 
-  document.getElementById("matricula").value = " ";
-  document.getElementById("nombre").value = " ";
-  document.getElementById("apellidoP").value = " ";
-  document.getElementById("apellidoM").value = " ";
+  document.getElementById("matricula").value = "";
+  document.getElementById("nombre").value = "";
+  document.getElementById("apellidoP").value = "";
+  document.getElementById("apellidoM").value = "";
 });
 
 btnBuscar.addEventListener("click", () => {
@@ -70,10 +71,10 @@ btnGuardar.addEventListener("click", () => {
 
   alert("Éxito al guardar las calificaciones");
 
-  document.getElementById("matric-b").value = " ";
-  document.getElementById("corte1").value = " ";
-  document.getElementById("corte2").value = " ";
-  document.getElementById("corte3").value = " ";
+  document.getElementById("matric-b").value = "";
+  document.getElementById("corte1").value = "";
+  document.getElementById("corte2").value = "";
+  document.getElementById("corte3").value = "";
 });
 
 btnMaxMin.addEventListener("click", () => {
@@ -123,5 +124,58 @@ btnMaxMin.addEventListener("click", () => {
     }
   } else {
     alert("No hay alumnos inscritos");
+  }
+});
+
+btnRecorrer.addEventListener("click", () => {
+  if (bts.min() != null) {
+    let nLista = 1;
+
+    const imprimir = (node) => {
+      const cuerpoTabla = document.getElementById("cuerpo-tabla");
+      const columna = document.createElement("tr");
+
+      let numeroLista = document.createElement("td");
+      numeroLista.innerText = nLista++;
+      columna.appendChild(numeroLista);
+
+      let matricula = document.createElement("td");
+      matricula.innerText = node.value.matricula;
+      columna.appendChild(matricula);
+
+      let apellidoP = document.createElement("td");
+      apellidoP.innerText = node.value.apellidoP;
+      columna.appendChild(apellidoP);
+
+      let apellidoM = document.createElement("td");
+      apellidoM.innerText = node.value.apellidoM;
+      columna.appendChild(apellidoM);
+
+      if (node.value.calC1 != null) {
+        let calC1 = document.createElement("td");
+        calC1.innerText = node.value.calC1;
+        columna.appendChild(calC1);
+
+        let calC2 = document.createElement("td");
+        calC2.innerText = node.value.calC2;
+        columna.appendChild(calC2);
+
+        let calC3 = document.createElement("td");
+        calC3.innerText = node.value.calC3;
+        columna.appendChild(calC3);
+
+        let final = document.createElement("td");
+        final.innerText = node.value.obtenerPromedio();
+        columna.appendChild(final);
+      }
+
+      cuerpoTabla.appendChild(columna);
+    };
+
+    bts.recorridoInorden(bts.getRoot(), imprimir);
+
+    btnRecorrer.disabled = true;
+  } else {
+    alert("Aun no hay alumnos inscritos");
   }
 });
