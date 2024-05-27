@@ -15,7 +15,7 @@
         <div class="h-left">
             <div class="menu">
                 <a href="">Acerca de</a>
-                <a href="#arignar-calificacion">Asignar Calificaciones</a>
+                <a href="#asignar-calificacion">Asignar Calificaciones</a>
                 <a href="#lista-alumnos">Lista de alumnos</a>
             </div>
             <div class="h-img">
@@ -68,23 +68,23 @@
                         <tbody>
                             <tr>
                                 <td class="td">Inscritos</td>
-                                <td class="td">Aprovados</td>
-                                <td>Reprovados</td>
+                                <td class="td">Aprobados</td>
+                                <td>Reprobados</td>
                             </tr>
                             <tr>
                                 <td class="td">
                                     <div class="inscritos">
-                                        <p>18</p>
+                                        <p id="inscritos"></p>
                                     </div>
                                 </td>
                                 <td class="td">
-                                    <div class="aprovados">
-                                        <p>15</p>
+                                    <div class="aprobados">
+                                        <p id="aprobados"></p>
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="reprovados">
-                                        <p>03</p>
+                                    <div class="reprobados">
+                                        <p id="reprobados"></p>
                                     </div>
                                 </td>
                             </tr>
@@ -101,7 +101,7 @@
                 </div>
                 <div class="rec-cont">
                     <div class="form-asig">
-                        <label for="matric">Ingresa la matricula del alumno:</label> <br>
+                        <label for="matric-b">Ingresa la matricula del alumno:</label> <br>
                         <input type="number" maxlength="6" minlength="6" placeholder="233333" id="matric-b"> <br>
                         <button id="buscar">Buscar</button>
                     </div>
@@ -137,6 +137,7 @@
                                 <th>Matrícula</th>
                                 <th>Apellido Paterno</th>
                                 <th>Apellido Materno</th>
+                                <th>Nombres</th>
                                 <th>C1</th>
                                 <th>C2</th>
                                 <th>C3</th>
@@ -146,28 +147,31 @@
                         <tbody>
                             <tr>
                                 <td>Primero en la lista</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td id="matricula-td1"></td>
+                                <td id="apellidoP-td1"></td>
+                                <td id="apellidoM-td1"></td>
+                                <td id="nombre-td1"></td>
+                                <td id="corte1-td1"></td>
+                                <td id="corte2-td1"></td>
+                                <td id="corte3-td1"></td>
+                                <td id="final-td1"></td>
                             </tr>
                             <tr>
                                 <td>Último en la lista</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td id="matricula-td2"></td>
+                                <td id="apellidoP-td2"></td>
+                                <td id="apellidoM-td2"></td>
+                                <td id="nombre-td2"></td>
+                                <td id="corte1-td2"></td>
+                                <td id="corte2-td2"></td>
+                                <td id="corte3-td2"></td>
+                                <td id="final-td2"></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                
+
+                <button id="listaRapida">Ver lista rapida</button>
                 <button id="listaCompleta">Ver lista completa</button>
 
                 <div class="lista-max-min">
@@ -182,7 +186,7 @@
                             <th>C3</th>
                             <th>Final</th>
                         </thead>
-                        <tbody>
+                        <tbody id="cuerpo-tabla">
                         </tbody>
                     </table>
                 </div>
@@ -190,5 +194,6 @@
         </div>
     </main>
     
+    <script type="module" src="src/controllers/script.js"></script>
 </body>
 </html>

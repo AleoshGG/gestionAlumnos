@@ -157,7 +157,7 @@ header {
   text-align: center;
 }
 
-#inscribir, #buscar, #guardarCal, #listaCompleta {
+#inscribir, #buscar, #guardarCal, #listaCompleta, #listaRapida {
   width: 150px;
   padding: 10px;
   border-radius: 5px;
@@ -166,12 +166,12 @@ header {
   border: none;
 }
 
-#inscribir:hover, #buscar:hover, #guardarCal:hover, #listaCompleta:hover {
+#inscribir:hover, #buscar:hover, #guardarCal:hover, #listaCompleta:hover, #listaRapida:hover {
   transition: 0.5s;
   transform: scale(0.9);
 }
 
-#inscribir:active, #buscar:active, #guardarCal:active, #listaCompleta:active {
+#inscribir:active, #buscar:active, #guardarCal:active, #listaCompleta:active, #listaRapida:active {
   transition: 0.2s;
   color: #d62839;
 }
@@ -223,7 +223,7 @@ th {
   justify-content: center;
 }
 
-.aprovados {
+.aprobados {
   width: 100px;
   height: 100px;
   background-color: #1b998b;
@@ -236,7 +236,7 @@ th {
   justify-content: center;
 }
 
-.reprovados {
+.reprobados {
   width: 100px;
   height: 100px;
   background-color: #d62839;

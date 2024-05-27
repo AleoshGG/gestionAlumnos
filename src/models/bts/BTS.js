@@ -1,4 +1,4 @@
-import { Node } from "./node.js";
+import { Node } from "./Node.js";
 
 export class BTS {
   #root;
@@ -17,38 +17,35 @@ export class BTS {
   }
 
   insertNode(node, value) {
-    if (value.lastName < node.value.lastName) {
+    if (value.matricula < node.value.matricula) {
       if (node.left == null) {
         node.left = new Node(value);
         return true;
       } else {
-        this.insertNode(node.left, value);
+        return this.insertNode(node.left, value);
       }
     } else {
       if (node.rigth == null) {
         node.rigth = new Node(value);
         return true;
       } else {
-        this.insertNode(node.rigth, value);
+        return this.insertNode(node.rigth, value);
       }
     }
   }
 
-  //Añadir busqueda por lastname
-  search(lastName, firstName) {
-    return this.searchNode(this.#root, lastName, firstName);
+  //Añadir busqueda por matricula
+  search(value) {
+    return this.searchNode(this.#root, value);
   }
 
-  searchNode(node, lastName, firstName) {
-    if (
-      node == null ||
-      (node.value.lastName == lastName && node.value.firstName == firstName)
-    ) {
+  searchNode(node, value) {
+    if (node == null || node.value.matricula == value) {
       return node;
-    } else if (lastName < node.value.lastName) {
-      return this.searchNode(node.left, lastName, firstName);
+    } else if (value < node.value.matricula) {
+      return this.searchNode(node.left, value);
     } else {
-      return this.searchNode(node.rigth, lastName, firstName);
+      return this.searchNode(node.rigth, value);
     }
   }
 
