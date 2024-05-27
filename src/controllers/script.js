@@ -57,9 +57,7 @@ btnGuardar.addEventListener("click", () => {
   let calC2 = parseFloat(document.getElementById("corte2").value);
   let calC3 = parseFloat(document.getElementById("corte3").value);
 
-  alumnoS.value.calC1 = calC1;
-  alumnoS.value.calC2 = calC2;
-  alumnoS.value.calC3 = calC3;
+  alumnoS.value.guardarCalificacion(calC1, calC2, calC3);
 
   if (alumnoS.value.obtenerPromedio() >= 70) {
     contadorAprobados++;
